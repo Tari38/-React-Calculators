@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/Navs/Nav";
 import Home from "./components/Home";
 import Calculator from "./basic-calculator/Calculator";
+import BmiCalculator from "./bmi-calculator/BmiCalculator";
+import ScientificCalculator from "./scientific-calculator/ScientificCalculator";
 import Footer from "./components/partials/Footer.jsx";
 
 import "./App.css";
@@ -24,6 +26,12 @@ return (
         </Route>
         <Route path="/basic-calculator/Calculator">
           <Calculator />
+        </Route>
+        <Route path="/bmi-calculator/BmiCalculator">
+          <BmiCalculator />
+        </Route>
+        <Route path="/scientific-calculator/ScientificCalculator">
+          <ScientificCalculator />
         </Route>
       </Switch>
       </div>

@@ -1,0 +1,19 @@
+.bmi-main {
+	justify-content: center;
+  display: flex;
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  background-color: #fff8cd;
+}
+
+.bmi-form-container {
+	width: 350px;
+  margin: 0;
+  padding: 80px 0;
+  text-align: center;
+  border: 2px solid #ff9642;
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px #fca652;
+  background-color: #f6f5f5;
+}
