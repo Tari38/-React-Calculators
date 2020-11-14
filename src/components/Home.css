@@ -1,0 +1,42 @@
+.home-main {
+  margin-top: 100px;
+  width: 100%;
+  justify-content: center;
+}
+
+.card-deck {
+  justify-content: space-between;
+  display: flex;
+}
+
+.card {
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  border: solid 2px #ff9642;
+  background-color: #646464;
+}
+.card-img {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  transform: scale(0.9);
+}
+
+.card-img:hover {
+ transform: scale(1);
+}
+
+.card-info {
+  font-family: 'Goldman', cursive;
+  text-align: center;
+  line-height: 1.25;
+  color: #fff8cd;
+}
+
+@media (max-width: 768px) {
+  .card-deck {
+    flex-direction: column;
+  }
+}
