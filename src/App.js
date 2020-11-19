@@ -4,7 +4,10 @@ import NavBar from "./components/Navs/Nav";
 import Home from "./components/Home";
 import Calculator from "./basic-calculator/Calculator";
 import BmiCalculator from "./bmi-calculator/BmiCalculator";
-import ScientificCalculator from "./scientific-calculator/ScientificCalculator";
+import Converters from "./converters/Converters";
+import LengthConverter from "./converters/Length";
+import WeightConverter from "./converters/Weight";
+import TemperatureConverter from "./converters/Temperature";
 import Footer from "./components/partials/Footer.jsx";
 
 import "./App.css";
@@ -12,6 +15,7 @@ import "./App.css";
 function App() {
 
 return (
+
   <Router>
   <NavBar />
   <div className="App">
@@ -30,14 +34,25 @@ return (
         <Route path="/bmi-calculator/BmiCalculator">
           <BmiCalculator />
         </Route>
-        <Route path="/scientific-calculator/ScientificCalculator">
-          <ScientificCalculator />
+        <Route path="/converters/Converters">
+          <Converters />
         </Route>
+        <Route path="/Length">
+          <LengthConverter />
+        </Route>
+        <Route path="/Weight">
+          <WeightConverter />
+        </Route>
+        <Route path="/Temperature">
+          <TemperatureConverter />
+        </Route>
+
       </Switch>
       </div>
       </div>
       <Footer />
   </Router>
+
 );
 }
 

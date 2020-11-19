@@ -1,0 +1,48 @@
+.converter-main {
+	justify-content: center;
+  display: flex;
+  margin-top: 100px;
+  width: 100%;
+  height: auto;
+  background-color: #fff8cd;
+}
+
+.converter-container {
+	width: 350px;
+  margin-top: 100px;
+  padding: 80px 0;
+  text-align: center;
+  border: 2px solid #ff9642;
+  border-radius: 20px;
+  box-shadow: 10px 5px 5px #fca652;
+  background-color: #f6f5f5;
+}
+
+.converter-container h1 {
+	margin-top: -45px;
+	font-family: 'Goldman', cursive;
+	font-size: 30px;
+	color: #646464;
+	font-weight: bold;
+}
+
+.converter-container h3 {
+	color: #646464;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+#outlined-number1, #outlined-number2	{
+	width: 90%;
+	
+	color: #646464;
+}
+
+#outlined-number3 {
+	width: 90%;
+	background-color: #fca652;
+}
+
+.field-container p {
+	margin: auto;
+}
