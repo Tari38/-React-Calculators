@@ -1,12 +1,13 @@
 .App {
-  margin: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
   font-family: 'Goldman', cursive;
   text-align: center;
   justify-content: space-around;
-  background-color: #fff8cd;
   display: flex;
   flex-direction: column;
-  z-index: 0;
+  background-image: radial-gradient(circle, #dcb958, #e1c462, #e6d06d, #ebdb78, #f0e784, #f1e982, #f1eb81, #f2ed7f, #f0e66f, #eee05e, #ecd94d, #ebd23a);
 }
 
 .container {

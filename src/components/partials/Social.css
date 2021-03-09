@@ -1,6 +1,6 @@
 .social {
   position: absolute;
-  background-color:  rgba(7, 93, 133, 1);
+  background-color:  inherit;
   margin-top: 10px;
   bottom: 10px;
 }
@@ -13,22 +13,21 @@
 }
 
 .social a:hover {
-  color: #53a7eb;
+  color: #dc75b1
 }
 
 @media all and (min-width: 200px) {
   .social {
-    position: fixed;
     left:0;
     width: 100vw;
     display: flex;
     justify-content: space-around;
-    bottom: 0;
+    bottom: 5px;
   }
 
   .social a {
     justify-content: space-around;
     padding-right: 10px;
-    bottom: 10px;
+    margin-bottom: 10px;
   }
 }

@@ -1,0 +1,24 @@
+.weight-main {
+  background-color: inherit;
+  margin-top: 120px;
+  width: 100%;
+  justify-content: center;
+}
+
+.weight-container h1 {
+  font-family: 'Goldman', cursive;
+  text-align: center;
+  color: #646464;
+}
+
+.weight-container {
+	margin-bottom: 20px;
+}
+
+.weight-input {
+  background-color: #fff;
+}
+
+.btn-pounds {
+  color: #dc75b1;
+}

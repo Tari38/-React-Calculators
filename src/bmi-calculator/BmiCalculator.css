@@ -15,7 +15,7 @@ iframe {
   margin-top: 100px;
   width: 100%;
   height: auto;
-  background-color: #fff8cd;
+  background-color: inherit;
 }
 
 .bmi-form-container {
@@ -26,5 +26,5 @@ iframe {
   border: 2px solid #ff9642;
   border-radius: 20px;
   box-shadow: 10px 5px 5px #fca652;
-  background-color: #f6f5f5;
+  background-color: inherit;
 }

@@ -4,8 +4,8 @@
   margin: 0;
   background-color: #646464;
   width: 100%;
-  height: 100px;
-  overflow: hidden;
+  height: 120px;
+  overflow: visible;
 }
 
 .nav-brand {
@@ -13,8 +13,9 @@
   font-size: 2.5rem;
   padding: 5px;
   margin-left: 20px;
-  background-color: #fff8cd;
+  background-image: radial-gradient(circle, #dcb958, #e1c462, #e6d06d, #ebdb78, #f0e784, #f1e982, #f1eb81, #f2ed7f, #f0e66f, #eee05e, #ecd94d, #ebd23a);
   border-radius: 5px;
+  color: #dc75b1;
 }
 
 .navlinks-container {
@@ -22,14 +23,18 @@
   flex-direction: row;
 }
 
-.dropdown-container {
-  z-index: 1000;
+#dropdown-container {
+  margin: 0;
   display: flex;
   flex-direction: column;
   background-color: #646464;
 }
 
-.dropdown-container #dropdown-item {
+#dropdown-item {
+  color: #fff8cd;
+}
+#dropdown-item:hover {
+  background-color: #dc75b1;
   color: #646464;
 }
 
@@ -39,25 +44,25 @@
   background-color: #646464;
   color: #fff8cd;
 }
-.navlink {
+.navlink, .menu-navlink {
   font-family: 'Goldman', cursive;
-  color: #fff8cd;
+  color: #dc75b1;
   text-decoration: none;
   justify-content: space-between;
   margin: auto;
   padding: 14px 16px;
 }
 
-.navlink:hover {
+.navlink:hover, .menu-navlink:hover {
   color: #fff8cd;
   text-decoration: underline;
 }
 
-#dropdown-button-drop {
-  z-index: 1000;
+#basic-nav-dropdown {
+  vertical-align: middle;
   width: auto;
   font-family: 'Goldman', cursive;
-  color: #fff8cd;
+  color: #dc75b1;
   text-decoration: none;
   background-color: #646464;
 }
@@ -113,7 +118,7 @@
   flex: none;
   width: 100%;
   height: 2px;
-  background: rgb(243, 248, 255);
+  background: #dc75b1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,7 +196,8 @@
 
 .menu-wrap .menu > div {
   z-index: 5;
-  background: rgba(7, 93, 133, 0.9);
+  background: #dc75b1;
+  color: #fff8cd;
   opacity: 0.9;
   border-radius: 50%;
   width: 200vw;
@@ -228,9 +234,12 @@
   transition: color 0.6s ease-in-out;
 }
 
-.menu-navlink:hover {
-  color: rgb(60, 143, 182);
-  cursor: pointer;
+.menu-navlink {
   text-decoration: none;
-  transform: scale(1.1);
+  font-weight: bold;
+}
+
+.menu-navlink:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

@@ -1,80 +1,58 @@
-import React, { useState } from 'react';
-import MeasureSelect from './components/MeasureSelect';
-import Switch from './components/Switch';
-import Input from './components/Input';
-
-import "./styles/Converter.css";
-
+import React, { useState, useEffect } from 'react';
+import TextField from "@material-ui/core/TextField";
+import "./styles/Temperature.css";
 
 export default function TemperatureConverter() {
 
-	const measures = {
-	  temperature: {
-	    set1: {
-	      conversion: [1.8000, 32],
-	      "Celsius": {unit: "Celsius", symbol: "°C"},
-	      "Fahrenheit": {unit: "Fahrenheit", symbol: "°F"}
-	    }
-	  }
-	}
+	const [celsius, setCelsius] = useState("Celsius");
+	const [fahrenheit, setFahrenheit] = useState("fahrenheit");
 
-  const [unitA, setUnitA] = useState(measures.temperature.set1["Celsius"])
-  const [unitB, setUnitB] = useState(measures.temperature.set1["Fahrenheit"])
-  const [measurement, setMeasurement] = useState("temperature")
-  const [input, setInput] = useState("")
-  const [output, setOutput] = useState("")
+  const updateCelsius = event => {
+    setCelsius(event.target.value);
+    setFahrenheit(event.target.value * 9/5+32);
+  };
 
-  const onSubmit = (event) => {
-    event.preventDefault()
-    setOutput(_convert(measurement))
-  }
+	const updateFahrenheit = event => {
+		setFahrenheit(event.target.value);
+		setCelsius(event.target.value / 9*5-32);
+	};
 
-	const _convert = (measurement) => {
-    let {set1, set2} = [measurement]
+	useEffect(() => {
+    console.log("celsius", celsius)
+    console.log("fahrenheit", fahrenheit);
+  }, [celsius, fahrenheit]);
 
-    return Object.keys(set1).includes(unitA.unit)
-      ? _calculate(unitA.unit, set1.conversion)
-      : _calculate(unitA.unit, set2.conversion)
-	  }
-
-  const _calculate = (unit, conversionVal) => {
-    if(["Celsius", "Fahrenheit"].includes(unit)){
-      let val = unit === "Celsius"
-        ? input * conversionVal[0] + conversionVal[1]
-        : (input - conversionVal[1]) / conversionVal[0]
-      return val.toFixed(1)
-    }
 
   return (
-    <div className="converter-container">
-      <div className="header">
-        <h1>Temperature Conversion</h1>
-      </div>
-      <form className="pure-form" onSubmit={onSubmit}>
-        <fieldset>
-          <MeasureSelect
-            measurement={measurement}
-            setMeasurement={setMeasurement}
-            unit={unitB.symbol}
-            setUnitA={setUnitA}
-            setUnitB={setUnitB}/>
-
-          <Switch
-            unitA={unitA}
-            unitB={unitB}
-            setUnitA={setUnitA}
-            setUnitB={setUnitB}
-            setOutput={setOutput}/>
-
-          <Input
-            unitA={unitA}
-            unitB={unitB}
-            input={input}
-            output={output}
-            setInput={setInput}/>
-        </fieldset>
-      </form>
+		<container className="temp-main">
+    <div className="temp-container">
+      <h1>Temperature Conversion</h1>
+			<div className="field-container">
+        <TextField
+          value={celsius}
+          onChange={updateCelsius}
+          id="outlined-number1"
+          label="Celsius"
+          type="number"
+          InputLabelProps={{
+            shrink: true
+        }}
+        variant="filled"
+        />
+			<p> is Equal to </p>
+			<TextField
+				value={fahrenheit}
+				onChange={updateFahrenheit}
+				id="outlined-number2"
+				label="Fahrenheit"
+				type="number"
+				InputLabelProps={{
+					shrink: true
+				}}
+				variant="filled"
+			/>
+		 </div>
     </div>
+		</container>
   )
-}
 }

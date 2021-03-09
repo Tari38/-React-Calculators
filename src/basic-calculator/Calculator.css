@@ -12,10 +12,11 @@ iframe {
 .calc-main {
   justify-content: center;
   display: flex;
+  margin: 0;
   margin-top: 100px;
   width: 100%;
   height: auto;
-  background-color: #fff8cd;
+  background-image: radial-gradient(circle, #dcb958, #e1c462, #e6d06d, #ebdb78, #f0e784, #f1e982, #f1eb81, #f2ed7f, #f0e66f, #eee05e, #ecd94d, #ebd23a);
 }
 
 .calc-container {

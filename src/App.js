@@ -37,13 +37,13 @@ return (
         <Route path="/converters/Converters">
           <Converters />
         </Route>
-        <Route path="/Length">
+        <Route path="/converters/Length">
           <LengthConverter />
         </Route>
-        <Route path="/Weight">
+        <Route path="/converters/Weight">
           <WeightConverter />
         </Route>
-        <Route path="/Temperature">
+        <Route path="/converters/Temperature">
           <TemperatureConverter />
         </Route>
 

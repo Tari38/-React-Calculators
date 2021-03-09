@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./styles/Converter.css";
+import "./styles/Weight.css";
 
 export default function WeightConverter() {
 
@@ -22,8 +22,8 @@ export default function WeightConverter() {
 	  }
 
   return (
-    <container className="converter-main">
-			 <div className="converter-container">
+    <container className="weight-main">
+			 <div className="weight-container">
 				<h1>Weight Converter </h1>
 					<form onSubmit={(e) => e.preventDefault()}>
 						<input

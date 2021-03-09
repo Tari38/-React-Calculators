@@ -1,0 +1,28 @@
+.temp-main {
+  background-color: inherit;
+  margin-top: 120px;
+  width: 100%;
+  justify-content: center;
+}
+
+.temp-container h1 {
+  font-family: 'Goldman', cursive;
+  text-align: center;
+  color: #646464;
+}
+
+.temp-container {
+  justify-content: space-around;
+}
+.temp-container input {
+  font-family: 'Goldman', cursive;
+	color: #646464;
+  width: 90%;
+	font-weight: bold;
+  margin: 10px;
+}
+
+.temp-container button {
+  width: 90%;
+  margin: 10px;
+}

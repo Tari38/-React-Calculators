@@ -33,10 +33,10 @@ export default function Length() {
   }, [feet, inches, cm]);
 
   return (
+    <container className="length-main">
+      <div className="length-container">
+      <h1>Length Converter</h1>
 
-    <div className="converter-container">
-    <h1>Length Converter</h1>
-    <h3>Imperial to Metric</h3>
       <div className="field-container">
         <TextField
           value={feet}
@@ -47,7 +47,7 @@ export default function Length() {
           InputLabelProps={{
             shrink: true
         }}
-        variant="outlined"
+        variant="filled"
         />
         <p> is Equal to </p>
         <TextField
@@ -59,7 +59,7 @@ export default function Length() {
           InputLabelProps={{
             shrink: true
           }}
-          variant="outlined"
+          variant="filled"
         />
        </div>
 
@@ -80,6 +80,6 @@ export default function Length() {
         />
       </div>
     </div>
-
+    </container>
   );
 }
